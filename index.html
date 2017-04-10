@@ -46,21 +46,21 @@ layout: compress
 <script>
 
 function waktu(){
-tanggal = new Date()
-sekarang = tanggal.getDate()
+    tanggal = new Date();
+    sekarang = tanggal.getDate();
 
-grup = sekarang % 6
-if (grup == 0){
-    grup = 6
+    grup = sekarang % 6;
+    if (grup == 0){
+        grup = 6;
+    }
+    grup *= 5;
+
+    document.getElementById("tanggal2").innerHTML = grup;
+    document.getElementById("tanggal1").innerHTML = grup - 4;
 }
-grup *= 5
 
-document.getElementById("tanggal2").innerHTML = grup
-document.getElementById("tanggal1").innerHTML = grup - 4
-}
-
-waktu()
-window.setInterval("waktu()", 3600000)
+waktu();
+window.setInterval("waktu()", 3600000);
 
 </script>
 
