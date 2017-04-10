@@ -1,3 +1,7 @@
+---
+layout: compress
+---
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,12 +38,11 @@
 	<div class="outer">
 		<div class="inner">
 			<div class="isi">
-				<p><span class="tanggal1">1</span> - <span class="tanggal2">5</span></p>
+				<p><span id="tanggal1">1</span> - <span id="tanggal2">5</span></p>
 			</div>
 		</div>
 	</div>
 
-<script src="jquery.min.js"></script>
 <script>
 
 function waktu(){
@@ -52,8 +55,8 @@ if (grup == 0){
 }
 grup *= 5
 
-$(".tanggal2").html(grup)
-$(".tanggal1").html(grup - 4)
+document.getElementById("tanggal2").innerHTML = grup
+document.getElementById("tanggal1").innerHTML = grup - 4
 }
 
 waktu()
